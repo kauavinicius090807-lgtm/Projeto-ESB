@@ -1,8 +1,39 @@
-# Created by venv; see https://docs.python.org/3/library/venv.html
+# Variáveis de ambiente e segredos locais
+.env
+.env.*
+!.env.example
+
+# Cache e artefatos do Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Ambientes virtuais
+.venv/
 venv/
-*venv
-*en
-.vscode/
-dist/
+env/
+ENV/
+
+# Ferramentas de teste e análise
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Empacotamento e distribuição
 build/
-*.log
+dist/
+*.egg-info/
+
+# Arquivos e configurações locais de IDE
+.vscode/*
+!.vscode/launch.json
+.idea/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+Desktop.ini
