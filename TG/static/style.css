@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #202124;
+}
+
+
+/* HEADER */
+
+header {
+    height: 70px;
+
+    background: #172b4d;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8%;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* HERO */
+
+.hero {
+    background: white;
+
+    padding: 70px 8%;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.hero h1 {
+    max-width: 650px;
+
+    font-size: 42px;
+    line-height: 1.15;
+
+    color: #172b4d;
+}
+
+.hero p {
+    margin-top: 15px;
+}
+
+.hero .descricao {
+    max-width: 650px;
+
+    color: #666;
+
+    line-height: 1.6;
+}
+
+
+/* SEÇÃO */
+
+section {
+    padding: 50px 8%;
+}
+
+.titulo-secao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.titulo-secao h2 {
+    color: #172b4d;
+}
+
+.titulo-secao span {
+    color: #777;
+}
+
+
+/* LIVROS */
+
+.livros {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(240px, 1fr));
+
+    gap: 20px;
+}
+
+.card {
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.08);
+
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.capa {
+    height: 130px;
+
+    background: #e9eef5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 50px;
+}
+
+.card-conteudo {
+    padding: 20px;
+}
+
+.categoria {
+    font-size: 12px;
+
+    color: #3569a8;
+
+    font-weight: bold;
+}
+
+.card h3 {
+    margin-top: 10px;
+
+    font-size: 18px;
+}
+
+.card p {
+    margin-top: 8px;
+
+    color: #777;
+}
+
+.disponivel {
+    margin-top: 15px;
+
+    color: #218739;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+.emprestado {
+    margin-top: 15px;
+
+    color: #c0392b;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* CADASTRO */
+
+.cadastro {
+    background: white;
+
+    margin: 20px 8% 60px;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.cadastro h2 {
+    color: #172b4d;
+
+    margin-bottom: 25px;
+}
+
+form {
+    display: grid;
+
+    gap: 18px;
+}
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+label {
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+input {
+    padding: 13px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+
+    border-color: #3569a8;
+}
+
+button {
+    width: fit-content;
+
+    padding: 13px 25px;
+
+    background: #172b4d;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+button:hover {
+    background: #25446f;
+}
+
+
+/* FOOTER */
+
+footer {
+    background: #172b4d;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    section {
+        padding: 35px 5%;
+    }
+
+    .cadastro {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+}
