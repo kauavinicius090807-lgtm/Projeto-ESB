@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biblioteca ESB</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            📚 Biblioteca ESB
+        </div>
+
+        <nav>
+            <a href="/">Início</a>
+            <a href="#livros">Livros</a>
+            <a href="#cadastro">Cadastrar</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <div>
+
+                <h1>
+                    Sistema de Gerenciamento
+                    de Biblioteca
+                </h1>
+
+                <p>
+                    Escola São Bernardo
+                </p>
+
+                <p class="descricao">
+                    Consulte livros, acompanhe a disponibilidade
+                    do acervo e gerencie os registros da biblioteca.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section id="livros">
+
+            <div class="titulo-secao">
+
+                <h2>📚 Livros do Acervo</h2>
+
+                <span>
+                    {{ livros|length }} livros cadastrados
+                </span>
+
+            </div>
+
+
+            <div class="livros">
+
+                {% for id, livro in livros.items() %}
+
+                <div class="card">
+
+                    <div class="capa">
+                        📖
+                    </div>
+
+                    <div class="card-conteudo">
+
+                        <span class="categoria">
+                            {{ livro.categoria }}
+                        </span>
+
+                        <h3>
+                            {{ livro.titulo }}
+                        </h3>
+
+                        <p>
+                            {{ livro.autor }}
+                        </p>
+
+                        {% if livro.disponivel %}
+
+                        <div class="disponivel">
+                            ● Disponível
+                        </div>
+
+                        {% else %}
+
+                        <div class="emprestado">
+                            ● Emprestado
+                        </div>
+
+                        {% endif %}
+
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            </div>
+
+        </section>
+
+
+        <section id="cadastro" class="cadastro">
+
+            <h2>➕ Cadastrar novo livro</h2>
+
+            <form action="/cadastrar" method="POST">
+
+                <div class="campo">
+
+                    <label>
+                        Título
+                    </label>
+
+                    <input
+                        type="text"
+                        name="titulo"
+                        placeholder="Nome do livro"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label>
+                        Autor
+                    </label>
+
+                    <input
+                        type="text"
+                        name="autor"
+                        placeholder="Nome do autor"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label>
+                        Categoria
+                    </label>
+
+                    <input
+                        type="text"
+                        name="categoria"
+                        placeholder="Ex: Enfermagem"
+                        required
+                    >
+
+                </div>
+
+
+                <button type="submit">
+                    Cadastrar livro
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            📚 Sistema de Gerenciamento de Biblioteca - ESB
+        </p>
+
+        <p>
+            Projeto acadêmico
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
