@@ -61,6 +61,23 @@ def cadastrar():
 
     return redirect("/")
 
+@app.route("/editar/<int:livro_id>", methods=["GET", "POST"])
+def editar(livro_id):
+    if livro_id not in livros:
+        return redirect("/")
+    
+    livro = livros[livro_id]
+    
+    if request.method == "POST":
+        livro["titulo"] = request.form["titulo"]
+        livro["autor"] = request.form["autor"]
+        livro["categoria"] = request.form["categoria"]
+        # Se o checkbox estiver marcado, fica True, senão False
+        livro["disponivel"] = "disponivel" in request.form
+        return redirect("/")
+        
+    return render_template("editar.html", livro=livro, livro_id=livro_id)
+
 
 # =========================
 # INICIAR SERVIDOR
