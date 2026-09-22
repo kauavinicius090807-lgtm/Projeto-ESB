@@ -335,6 +335,45 @@ Status: {status}
 -----------------------------
 """)
 
+def editar_livro():
+    print("\n===== EDITAR LIVRO =====")
+    listar_livros()
+    
+    try:
+        livro_id = int(input("Digite o ID do livro que deseja editar: "))
+    except ValueError:
+        print("\nID inválido.")
+        return
+
+    if livro_id not in livros:
+        print("\nLivro não encontrado.")
+        return
+
+    livro = livros[livro_id]
+    print(f"\nEditando: {livro['titulo']} (Pressione Enter para manter o valor atual)")
+
+    novo_titulo = input(f"Novo título [{livro['titulo']}]: ").strip()
+    if novo_titulo:
+        livro['titulo'] = novo_titulo
+
+    novo_autor = input(f"Novo autor [{livro['autor']}]: ").strip()
+    if novo_autor:
+        livro['autor'] = novo_autor
+
+    nova_categoria = input(f"Nova categoria/gênero [{livro['categoria']}]: ").strip()
+    if nova_categoria:
+        livro['categoria'] = nova_categoria
+
+    status_atual = "Disponível" if livro['disponivel'] else "Emprestado"
+    print(f"Status atual: {status_atual}")
+    novo_status = input("O livro está disponível? (s/n, deixe em branco para não alterar): ").strip().lower()
+    
+    if novo_status == 's':
+        livro['disponivel'] = True
+    elif novo_status == 'n':
+        livro['disponivel'] = False
+
+    print("\nLivro atualizado com sucesso!")
 
 # =========================
 # MENU PRINCIPAL
@@ -356,6 +395,7 @@ def menu():
 5 - Renovar empréstimo
 6 - Devolver livro
 7 - Ver histórico
+8 - Editar livro
 0 - Sair
 
 ========================================
@@ -383,6 +423,9 @@ def menu():
 
         elif opcao == "7":
             mostrar_historico()
+
+        elif opcao == "8":
+          editar_livro()    
 
         elif opcao == "0":
             print("\nSistema encerrado.")
