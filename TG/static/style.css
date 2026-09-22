@@ -267,6 +267,21 @@ button:hover {
 }
 
 
+.btn-editar {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 12px;
+    background: #3569a8;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.btn-editar:hover {
+    background: #172b4d;
+}
+
 /* FOOTER */
 
 footer {
