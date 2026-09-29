@@ -96,7 +96,7 @@ A modelagem completa do fluxo de trabalho pode ser visualizada no diagrama **BPM
 <div align="center">
 
 </div>
-[BPMN](./BPMN-TO-BE.jpg)
+![BPMN](./BPMN-TO-BE.jpg)
 ---
 
 ## 🎯 Objetivos do Projeto
