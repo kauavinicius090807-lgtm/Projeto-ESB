@@ -94,10 +94,8 @@ O fluxo também contempla a ampliação do acervo por meio de doações (parceri
 A modelagem completa do fluxo de trabalho pode ser visualizada no diagrama **BPMN** abaixo:
 
 <div align="center">
-
-</div>
 ![BPMN](./BPMN-TO-BE.jpg)
----
+</div>
 
 ## 🎯 Objetivos do Projeto
 
