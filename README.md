@@ -106,7 +106,7 @@ Todos os artefatos desenvolvidos durante o projeto estão centralizados neste re
 
 * 📄 **[Escopo da Documentação](./Escopo.pdf)**
 * 📖 **[Monografia Completa](./Monografia.pdf)**
-* 🔄 **[Diagrama BPMN em Alta Resolução](./BPMN.pdf)**
+* 🔄 **[Diagrama BPMN em Alta Resolução](./BPMN-TO-BE.pdf)**
 
 ---
 
