@@ -44,48 +44,38 @@ As seguintes ferramentas e abordagens foram empregadas no desenvolvimento do pro
 O fluxo operacional do sistema divide-se em três grandes pilares: **Empréstimo**, **Devolução** e **Entrada de Novos Livros**.
 
 ### 📚 1. Empréstimo de Livros
-<div style="background-color: #f6f8fa; padding: 15px; border-radius: 6px; border: 1px solid #d0d7de;">
 
-O fluxo de retirada ocorre nas seguintes etapas:
-1. O aluno pesquisa e localiza o livro desejado na biblioteca.
-2. A equipe realiza a verificação da regularidade da matrícula do aluno.
-3. Estando apto, o aluno recebe e preenche a ficha de retirada.
-4. O atendente valida a integridade e disponibilidade do livro.
-5. O empréstimo é efetivado no sistema/controle e o comprovante é entregue ao aluno.
-
-</div>
+> O fluxo de retirada ocorre nas seguintes etapas:
+> 1. O aluno pesquisa e localiza o livro desejado na biblioteca.
+> 2. A equipe realiza a verificação da regularidade da matrícula do aluno.
+> 3. Estando apto, o aluno recebe e preenche a ficha de retirada.
+> 4. O atendente valida a integridade e disponibilidade do livro.
+> 5. O empréstimo é efetivado no sistema/controle e o comprovante é entregue ao aluno.
 
 ### ⏰ 2. Devolução de Livros
-<div style="background-color: #f6f8fa; padding: 15px; border-radius: 6px; border: 1px solid #d0d7de;">
 
-* **Prazo padrão:** 7 dias corridos.
-* **Prorrogações:** É permitida a renovação por até **3 vezes**, caso não haja reservas pendentes.
-* **Fluxo de devolução:**
-  * 📕 **Inspeção física:** A condição do livro é verificada.
-  * ⚠️ **Danos:** Caso o exemplar esteja danificado, o aluno poderá ser acionado para reposição.
-  * 📅 **Prazos:** A data de entrega é conferida em relação ao limite estipulado.
-  * 💰 **Multas:** Em caso de atraso, o valor correspondente é calculado.
-  * 📚 **Retorno ao estoque:** Após a conferência final, o livro é disponibilizado novamente para empréstimo.
-
-</div>
+> * **Prazo padrão:** 7 dias corridos.
+> * **Prorrogações:** É permitida a renovação por até **3 vezes**, caso não haja reservas pendentes.
+> * **Fluxo de devolução:**
+>   * 📕 **Inspeção física:** A condição do livro é verificada.
+>   * ⚠️ **Danos:** Caso o exemplar esteja danificado, o aluno poderá ser acionado para reposição.
+>   * 📅 **Prazos:** A data de entrega é conferida em relação ao limite estipulado.
+>   * 💰 **Multas:** Em caso de atraso, o valor correspondente é calculated.
+>   * 📚 **Retorno ao estoque:** Após a conferência final, o livro é disponibilizado novamente para empréstimo.
 
 ---
 
 ## 📦 Entrada de Novos Livros (Doações)
 
-<div style="background-color: #f6f8fa; padding: 15px; border-radius: 6px; border: 1px solid #d0d7de;">
-
-O fluxo também contempla a ampliação do acervo por meio de doações (parcerias com editoras ou doadores):
-
-1. 📋 Catalogação inicial dos títulos disponibilizados.
-2. 📝 Preparação e envio da lista para avaliação interna.
-3. 📩 Solicitação de autorização formal.
-4. 🤝 Contato com os doadores após a aprovação.
-5. 📦 Separação, embalagem e emissão da nota de doação.
-6. 🚚 Envio, recebimento e conferência física na biblioteca.
-7. 📚 Classificação, catalogação definitiva, etiquetagem e entrada oficial no estoque.
-
-</div>
+> O fluxo também contempla a ampliação do acervo por meio de doações (parcerias com editoras ou doadores):
+> 
+> 1. 📋 Catalogação inicial dos títulos disponibilizados.
+> 2. 📝 Preparação e envio da lista para avaliação interna.
+> 3. 📩 Solicitação de autorização formal.
+> 4. 🤝 Contato com os doadores após a aprovação.
+> 5. 📦 Separação, embalagem e emissão da nota de doação.
+> 6. 🚚 Envio, recebimento e conferência física na biblioteca.
+> 7. 📚 Classificação, catalogação definitiva, etiquetagem e entrada oficial no estoque.
 
 ---
 
@@ -93,9 +83,11 @@ O fluxo também contempla a ampliação do acervo por meio de doações (parceri
 
 A modelagem completa do fluxo de trabalho pode ser visualizada no diagrama **BPMN** abaixo:
 
-<div align="center">
-![BPMN](./BPMN-TO-BE.jpg)
-</div>
+<p align="center">
+  <img src="./BPMN-TO-BE.jpg" alt="BPMN" width="100%">
+</p>
+
+---
 
 ## 🎯 Objetivos do Projeto
 
