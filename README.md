@@ -95,7 +95,7 @@ A modelagem completa do fluxo de trabalho pode ser visualizada no diagrama **BPM
 
 <div align="center">
 
-![Diagrama BPMN](./BPMN.jpeg)
+![Diagrama BPMN](./BPMNTO-BE.pdf)
 
 </div>
 
