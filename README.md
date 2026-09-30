@@ -84,7 +84,7 @@ O fluxo operacional do sistema divide-se em três grandes pilares: **Empréstimo
 A modelagem completa do fluxo de trabalho pode ser visualizada no diagrama **BPMN** abaixo:
 
 <p align="center">
-  <img src="./BPMN-TO-BE.jpg" alt="BPMN" width="100%">
+  <img src="./BPMN TO-BE.jpg" alt="BPMN" width="100%">
 </p>
 
 ---
