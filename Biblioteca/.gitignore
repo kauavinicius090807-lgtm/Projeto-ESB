@@ -1,0 +1,40 @@
+# Variáveis de ambiente e segredos locais
+.env
+.env.*
+!.env.example
+
+# Cache e artefatos do Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+__pycache__
+pycache
+# Ambientes virtuais
+.venv/
+venv/
+env/
+ENV/
+
+# Ferramentas de teste e análise
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Empacotamento e distribuição
+build/
+dist/
+*.egg-info/
+
+# Arquivos e configurações locais de IDE
+.vscode/*
+!.vscode/launch.json
+.idea/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+Desktop.ini
