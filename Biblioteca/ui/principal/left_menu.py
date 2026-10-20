@@ -1,6 +1,6 @@
 
 from qt_core import *
-from ui.stylesheet import button_css, icon, toogle_css
+from ui.stylesheet import button_css, icon, toogle_css, StyleLeftbar
 
 
 class ui_left_menu(QWidget):
@@ -22,7 +22,7 @@ class ui_left_menu(QWidget):
                
         
         self.Left_menu = QFrame()
-        self.Left_menu.setStyleSheet("background-color: #1f2020")
+        StyleLeftbar(self.Left_menu)
         self.Left_menu.setObjectName(u"Left_menu")
         
         self.left_layout.addWidget(self.Left_menu)
@@ -36,7 +36,7 @@ class ui_left_menu(QWidget):
         
         
         self.Buttons = QFrame(self.Left_menu)
-        self.Buttons.setStyleSheet("background-color: #1f2020")
+        self.Buttons.setStyleSheet("background-color: #1c2027")
         self.Buttons.setObjectName(u"Buttons")
         #self.Buttons.setFrameShape(QFrame.Shape.StyledPanel)
         #self.Buttons.setFrameShadow(QFrame.Shadow.Raised)
@@ -55,7 +55,7 @@ class ui_left_menu(QWidget):
         self.btn_menu.setObjectName(u"button_menu")
 
         toogle_css(self.btn_menu)
-        icon(self.btn_menu, "assets/icons/menu.png")
+        icon(self.btn_menu, "biblioteca/assets/icons/menu.png")
         self.btn_menu.setCheckable(True)
         
                 
@@ -65,14 +65,14 @@ class ui_left_menu(QWidget):
         self.btn_usuario.setObjectName(u"button_usuario")
         self.btn_usuario.setMinimumHeight(45)
         self.btn_usuario.setSizePolicy(sizePolicy)
-        icon(self.btn_usuario, "assets/icons/usuario.png")
+        icon(self.btn_usuario, "biblioteca/assets/icons/usuario.png")
         toogle_css(self.btn_usuario)
         self.verticalLayout_2.addWidget(self.btn_usuario)
         
         self.btn_livros = QToolButton(self.Buttons)
         self.btn_livros.setObjectName(u"Button_livros")
         self.btn_livros.setSizePolicy(sizePolicy)
-        icon(self.btn_livros, "assets/icons/livro.png")
+        icon(self.btn_livros, "biblioteca/assets/icons/livro.png")
         toogle_css(self.btn_livros)
         self.btn_livros.setMinimumHeight(45)
         self.verticalLayout_2.addWidget(self.btn_livros)
@@ -81,7 +81,7 @@ class ui_left_menu(QWidget):
         self.btn_multas.setObjectName(u"button_multas")
         self.btn_multas.setMinimumHeight(45)
         self.btn_multas.setSizePolicy(sizePolicy)
-        icon(self.btn_multas, "assets/icons/multa.png")
+        icon(self.btn_multas, "biblioteca/assets/icons/multa.png")
         toogle_css(self.btn_multas)
         #self.button_multas.setEnabled(True)
         #self.button_multas.setStyleSheet(u"background-color: white")
@@ -103,7 +103,7 @@ class ui_left_menu(QWidget):
         self.btn_config.setMinimumHeight(50)
         self.btn_config.setObjectName(u"config")
         self.btn_config.setSizePolicy(sizePolicy)
-        icon(self.btn_config, "assets/icons/engrenagem.png")
+        icon(self.btn_config, "biblioteca/assets/icons/engrenagem.png")
         toogle_css(self.btn_config)
         self.verticalLayout_3.addWidget(self.btn_config)
         self.verticalLayout.addWidget(self.settings)

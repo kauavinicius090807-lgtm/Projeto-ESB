@@ -1,6 +1,6 @@
 
 from qt_core import *
-from ui.stylesheet import fonte
+from ui.stylesheet import fonte, StyleLeftpages
 
 class ui_left_pages(object):
     def setupUi(self, left_StackedWidget):
@@ -11,7 +11,7 @@ class ui_left_pages(object):
         self.usuario = QWidget()
         #self.usuario.setMaximumWidth(100)
         
-        self.usuario.setStyleSheet("background-color: #3c3c3c")
+        StyleLeftpages(self.usuario)
         self.usuario.setObjectName(u"usuario")
         self.horizontalLayout = QVBoxLayout(self.usuario)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
@@ -67,7 +67,7 @@ class ui_left_pages(object):
         self.livro = QWidget()
         #self.livro.setMaximumWidth(100)
         self.livro.setObjectName(u"livro")
-        self.livro.setStyleSheet("background-color: #3c3c3c")
+        StyleLeftpages(self.livro)
         self.horizontalLayout_2 = QVBoxLayout(self.livro)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         # self.label = QLabel("livro",self.livro)
@@ -82,7 +82,7 @@ class ui_left_pages(object):
         #self.multa.setMaximumWidth(100)
         
         self.multa.setObjectName(u"multa")
-        self.multa.setStyleSheet("background-color: #3c3c3c")
+        StyleLeftpages(self.multa)
         self.horizontalLayout_3 = QVBoxLayout(self.multa)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.label_2 = QLabel("multas",self.multa)

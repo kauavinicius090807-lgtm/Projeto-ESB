@@ -33,7 +33,7 @@ class ui_MainWindow(QMainWindow):
         
         #CREATE FRAME PRINCIPAL
         self.content = QFrame()
-        self.content.setStyleSheet("background-color: #1f2020")
+        self.content.setStyleSheet("background-color: #1c2027")
 
 
         #CREATE MENU DE OPÇÕES
@@ -47,13 +47,13 @@ class ui_MainWindow(QMainWindow):
         self.top_bar = QFrame()
         self.top_bar.setMaximumHeight(30)
         self.top_bar.setMinimumHeight(30)
-        self.top_bar.setStyleSheet("background-color: #282828")
+        self.top_bar.setStyleSheet("background-color: #23262d")
 
         #BOTTOM BAR
         self.bottom_bar = QFrame()
         self.bottom_bar.setMaximumHeight(30)
         self.bottom_bar.setMinimumHeight(30)
-        self.bottom_bar.setStyleSheet("background-color: #282828")
+        self.bottom_bar.setStyleSheet("background-color: #23262d")
 
 
         #PÁGINA DO MENU

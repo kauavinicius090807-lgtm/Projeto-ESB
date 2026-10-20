@@ -24,5 +24,5 @@ if __name__ == "__main__":
 
     app = QApplication(sys.argv)
     window = MainWindow()
-    window.setWindowIcon(QIcon("assets/Icons/image.png"))
+    window.setWindowIcon(QIcon("biblioteca/assets/Icons/image.png"))
     sys.exit(app.exec())
