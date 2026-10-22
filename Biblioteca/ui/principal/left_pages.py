@@ -1,6 +1,6 @@
 
 from qt_core import *
-from ui.stylesheet import fonte
+from ui.stylesheet import fonte, StyleLeftpages
 
 class ui_left_pages(object):
     def setupUi(self, left_StackedWidget):
@@ -8,10 +8,13 @@ class ui_left_pages(object):
             left_StackedWidget.setObjectName(u"left_pages")
         #StackedWidget.resize(865, 738)
         left_StackedWidget.setLayoutDirection(Qt.LayoutDirection.RightToLeft)
-        self.usuario = QWidget()
+        self.usuario = QFrame()
         #self.usuario.setMaximumWidth(100)
         
-        self.usuario.setStyleSheet("background-color: #3c3c3c")
+        StyleLeftpages(self.usuario)
+        self.usuario.setFrameShape(QFrame.Shape.Panel)
+        self.usuario.setFrameShadow(QFrame.Shadow.Raised)
+        self.usuario.setLineWidth(1)
         self.usuario.setObjectName(u"usuario")
         self.horizontalLayout = QVBoxLayout(self.usuario)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
@@ -22,16 +25,16 @@ class ui_left_pages(object):
         # self.txt_linha = QLabel("______________")
         # self.txt_linha.setMaximumHeight(10)
         # self.txt_linha.setAlignment(Qt.AlignmentFlag.AlignCenter | Qt.AlignmentFlag.AlignTop)
-        self.consultar = QToolButton()
-        self.cadastrar = QToolButton()
-        self.excluir = QToolButton()
+        self.consultar = QPushButton()
+        self.cadastrar = QPushButton()
+        self.excluir = QPushButton()
         
         self.group = QButtonGroup()
                  
         config_botoes = [
-                {"btn": self.consultar, "texto": " Consultar", "icone": "Icons/image.png"},
-                {"btn": self.cadastrar,  "texto": " Cadastrar",  "icone": "Icons/image.png"},
-                {"btn": self.excluir,  "texto": " Excluir",  "icone": "Icons/image.png"}
+                {"btn": self.consultar, "texto": " Consultar", "icone": "biblioteca/assets/Icons/image.png"},
+                {"btn": self.cadastrar,  "texto": " Cadastrar",  "icone": "biblioteca/assets/Icons/image.png"},
+                {"btn": self.excluir,  "texto": " Excluir",  "icone": "biblioteca/assets/Icons/image.png"}
 ]
 
             # 2. Configure o grupo e aplique os ícones/textos em um único loop
@@ -40,7 +43,7 @@ class ui_left_pages(object):
         for i, config in enumerate(config_botoes):
             btn = config["btn"]
             btn.setCheckable(True)
-            btn.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
+            #btn.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
             # Define o texto e o ícone na esquerda
             btn.setText(config["texto"])
             btn.setIcon(QIcon(config["icone"]))
@@ -48,10 +51,10 @@ class ui_left_pages(object):
             btn.setLayoutDirection(Qt.LayoutDirection.LeftToRight)
             
             # (Opcional) Ajusta o tamanho do ícone se achar muito pequeno
-            # btn.setIconSize(QtCore.QSize(24, 24)) 
+            btn.setIconSize(QtCore.QSize(24, 24)) 
             
             self.group.addButton(btn, i)
-        self.horizontalLayout.setContentsMargins(10, 10, 10, 10)
+        self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout.setSpacing(10)
         self.horizontalLayout.addWidget(self.txt_usuario)
         #self.horizontalLayout.addWidget(self.txt_linha)
@@ -64,10 +67,13 @@ class ui_left_pages(object):
         #self.txt_usuario.setText("USUARIO")
 
         left_StackedWidget.addWidget(self.usuario)
-        self.livro = QWidget()
+        self.livro = QFrame()
         #self.livro.setMaximumWidth(100)
         self.livro.setObjectName(u"livro")
-        self.livro.setStyleSheet("background-color: #3c3c3c")
+        StyleLeftpages(self.livro)
+        self.livro.setFrameShape(QFrame.Shape.Panel)
+        self.livro.setFrameShadow(QFrame.Shadow.Raised)
+        self.livro.setLineWidth(1)
         self.horizontalLayout_2 = QVBoxLayout(self.livro)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         # self.label = QLabel("livro",self.livro)
@@ -78,11 +84,14 @@ class ui_left_pages(object):
 
 
         left_StackedWidget.addWidget(self.livro)
-        self.multa = QWidget()
+        self.multa = QFrame()
         #self.multa.setMaximumWidth(100)
         
         self.multa.setObjectName(u"multa")
-        self.multa.setStyleSheet("background-color: #3c3c3c")
+        StyleLeftpages(self.multa)
+        self.multa.setFrameShape(QFrame.Shape.Panel)
+        self.multa.setFrameShadow(QFrame.Shadow.Raised)
+        self.multa.setLineWidth(1)
         self.horizontalLayout_3 = QVBoxLayout(self.multa)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.label_2 = QLabel("multas",self.multa)

@@ -1,6 +1,5 @@
 from PySide6.QtGui import QIcon, QFont, QColor
-from PySide6.QtWidgets import QGraphicsDropShadowEffect
-from PySide6.QtCore import QPropertyAnimation, QEasingCurve
+
 
 def button_css(widget):
     qss = ("""
@@ -14,7 +13,7 @@ def button_css(widget):
         }
         QPushButton:hover {
             background-color: #282828; /* Cor ao passar o mouse */
-            border-right: 4px solid #3c3c3c; /* Linha de destaque azul na esquerda */
+            border-left: 4px solid #333c4d; /* Linha de destaque azul na esquerda */
         }
         """)
     widget.setStyleSheet(qss)
@@ -29,8 +28,45 @@ def style(tela):
             """)
     
     tela.setStyleSheet(qss)
-
+def StyleLeftbar(widget):
     
+    qss = ("""QWidget {
+                background-color: #1c2027
+            }""")
+    
+    widget.setStyleSheet(qss)
+
+def StyleTopbar(widget):
+    
+    qss = ("""QWidget {
+                background-color: #23262d
+            }""")
+    
+    widget.setStyleSheet(qss)
+
+def StyleBotbar(widget):
+    
+    qss = ("""QWidget {
+                background-color: #23262d
+            }""")
+    
+    widget.setStyleSheet(qss)
+
+def StyleLeftpages(widget):
+    
+    qss = ("""QWidget {
+                background-color: #383b43
+            }""")
+    
+    widget.setStyleSheet(qss)
+    
+def StyleContent(widget):
+    
+    qss = ("""QWidget {
+                background-color: #1c2027
+            }""")
+    
+    widget.setStyleSheet(qss)    
 
 def toogle_css(widget):
 
@@ -45,12 +81,12 @@ def toogle_css(widget):
             
         }
         QToolButton:hover {
-            background-color: #323232; /* Cor ao passar o mouse */
-            border-right: 4px solid #3c3c3c; /* Linha de destaque na direita */
+            background-color: #242930; /* Cor ao passar o mouse */
+            border-left: 4px solid #333c4d; /* Linha de destaque na direita */
         }
         QToolButton:checked {
-                    background-color: #303030; /* Cor ao passar o mouse */
-                    border-right: 4px solid #3c3c3c; /* Linha de destaque azul na esquerda */
+                    background-color: #242930; /* Cor ao passar o mouse */
+                    border-left: 4px solid #7a93c2; /* Linha de destaque azul na esquerda */
                 }
         """)
     widget.setStyleSheet(qss)
