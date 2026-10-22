@@ -23,6 +23,9 @@ class ui_left_menu(QWidget):
         
         self.Left_menu = QFrame()
         StyleLeftbar(self.Left_menu)
+        self.Left_menu.setFrameShape(QFrame.Shape.Panel)
+        self.Left_menu.setFrameShadow(QFrame.Shadow.Sunken)
+        self.Left_menu.setLineWidth(1)
         self.Left_menu.setObjectName(u"Left_menu")
         
         self.left_layout.addWidget(self.Left_menu)

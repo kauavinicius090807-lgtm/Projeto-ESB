@@ -1,6 +1,5 @@
 from PySide6.QtGui import QIcon, QFont, QColor
-from PySide6.QtWidgets import QGraphicsDropShadowEffect
-from PySide6.QtCore import QPropertyAnimation, QEasingCurve
+
 
 def button_css(widget):
     qss = ("""
@@ -61,6 +60,13 @@ def StyleLeftpages(widget):
     
     widget.setStyleSheet(qss)
     
+def StyleContent(widget):
+    
+    qss = ("""QWidget {
+                background-color: #1c2027
+            }""")
+    
+    widget.setStyleSheet(qss)    
 
 def toogle_css(widget):
 
@@ -80,7 +86,7 @@ def toogle_css(widget):
         }
         QToolButton:checked {
                     background-color: #242930; /* Cor ao passar o mouse */
-                    border-left: 4px solid #233657; /* Linha de destaque azul na esquerda */
+                    border-left: 4px solid #7a93c2; /* Linha de destaque azul na esquerda */
                 }
         """)
     widget.setStyleSheet(qss)

@@ -10,8 +10,7 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.ui = ui_MainWindow()
         self.ui.setup_ui(self)
-        
-
+    
         self.show()
     
 

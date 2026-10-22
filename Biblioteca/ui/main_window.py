@@ -2,7 +2,7 @@ import sys
 
 from PySide6.QtGui import QMouseEvent
 from qt_core import *
-from ui.stylesheet import style
+from ui.stylesheet import style, StyleTopbar, StyleBotbar, StyleContent
 #from gui.ui_pages import Ui_StackedWidget
 from ui.principal.left_pages import ui_left_pages
 from ui.principal.left_menu import ui_left_menu
@@ -33,7 +33,7 @@ class ui_MainWindow(QMainWindow):
         
         #CREATE FRAME PRINCIPAL
         self.content = QFrame()
-        self.content.setStyleSheet("background-color: #1c2027")
+        StyleContent(self.content)
 
 
         #CREATE MENU DE OPÇÕES
@@ -47,13 +47,13 @@ class ui_MainWindow(QMainWindow):
         self.top_bar = QFrame()
         self.top_bar.setMaximumHeight(30)
         self.top_bar.setMinimumHeight(30)
-        self.top_bar.setStyleSheet("background-color: #23262d")
+        StyleTopbar(self.top_bar)
 
         #BOTTOM BAR
         self.bottom_bar = QFrame()
         self.bottom_bar.setMaximumHeight(30)
         self.bottom_bar.setMinimumHeight(30)
-        self.bottom_bar.setStyleSheet("background-color: #23262d")
+        StyleBotbar(self.bottom_bar)
 
 
         #PÁGINA DO MENU
