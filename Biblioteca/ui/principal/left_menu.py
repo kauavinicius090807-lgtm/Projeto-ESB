@@ -1,6 +1,6 @@
 
 from qt_core import *
-from ui.stylesheet import button_css, icon, toogle_css, StyleLeftbar
+from ui.stylesheet import icon, toogle_css, StyleLeftbar
 
 
 class ui_left_menu(QWidget):
@@ -14,24 +14,17 @@ class ui_left_menu(QWidget):
         self.left_layout = QVBoxLayout(self)
         self.left_layout.setContentsMargins(0, 0, 0, 0)
         self.left_layout.setSpacing(0)
-        
-      
-                
-        # Cor de fundo apenas para destacar visualmente a divisão das telas
-        #self.setStyleSheet("background-color: #9e2121; border-right: 1px solid #ccc;")
-               
+
         
         self.Left_menu = QFrame()
         StyleLeftbar(self.Left_menu)
-        self.Left_menu.setFrameShape(QFrame.Shape.Panel)
-        self.Left_menu.setFrameShadow(QFrame.Shadow.Sunken)
-        self.Left_menu.setLineWidth(1)
+
         self.Left_menu.setObjectName(u"Left_menu")
         
         self.left_layout.addWidget(self.Left_menu)
         
-        #self.Left_menu.setFrameShape(QFrame.Shape.StyledPanel)
-        #self.Left_menu.setFrameShadow(QFrame.Shadow.Raised)
+        self.Left_menu.setFrameShape(QFrame.Shape.Panel)
+        self.Left_menu.setFrameShadow(QFrame.Shadow.Sunken)
         self.verticalLayout = QVBoxLayout(self.Left_menu)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -41,8 +34,7 @@ class ui_left_menu(QWidget):
         self.Buttons = QFrame(self.Left_menu)
         self.Buttons.setStyleSheet("background-color: #1c2027")
         self.Buttons.setObjectName(u"Buttons")
-        #self.Buttons.setFrameShape(QFrame.Shape.StyledPanel)
-        #self.Buttons.setFrameShadow(QFrame.Shadow.Raised)
+
         self.verticalLayout_2 = QVBoxLayout(self.Buttons)
         self.verticalLayout.addWidget(self.Buttons)
         self.verticalLayout_2.setSpacing(0)
@@ -57,7 +49,25 @@ class ui_left_menu(QWidget):
         self.btn_menu.setSizePolicy(sizePolicy)
         self.btn_menu.setObjectName(u"button_menu")
 
-        toogle_css(self.btn_menu)
+        self.btn_menu.setStyleSheet("""
+        QToolButton {
+        background-color: #242930;
+            color: white;
+            border: none;
+            padding-left: 5px;
+            text-align: center; /* Alinha o ícone e o texto à esquerda */
+            font-size: 25px;
+            
+        }
+        QToolButton:hover {
+            background-color: #242930; /* Cor ao passar o mouse */
+            
+        }
+        QToolButton:checked {
+                    background-color: transparent; /* Cor ao passar o mouse */
+                    
+                }
+        """)
         icon(self.btn_menu, "biblioteca/assets/icons/menu.png")
         self.btn_menu.setCheckable(True)
         
