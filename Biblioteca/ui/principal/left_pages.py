@@ -129,9 +129,6 @@ class ui_left_pages(object):
         self.txt_lvr.setAlignment(Qt.AlignmentFlag.AlignBottom | Qt.AlignmentFlag.AlignHCenter)
         fonte(self.txt_lvr)
 
-        
-        
-        
 
         self.horizontalLayout_2.setContentsMargins(0, 5, 0, 0)
         self.horizontalLayout_2.setSpacing(5)

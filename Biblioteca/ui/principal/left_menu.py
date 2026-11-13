@@ -48,6 +48,7 @@ class ui_left_menu(QWidget):
         sizePolicy.setHeightForWidth(self.btn_menu.sizePolicy().hasHeightForWidth())
         self.btn_menu.setSizePolicy(sizePolicy)
         self.btn_menu.setObjectName(u"button_menu")
+        #self.btn_menu.setText("MENU")
 
         self.btn_menu.setStyleSheet("""
         QToolButton {
@@ -70,7 +71,8 @@ class ui_left_menu(QWidget):
         """)
         icon(self.btn_menu, "biblioteca/assets/icons/menu.png")
         self.btn_menu.setCheckable(True)
-        
+        self.btn_menu.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
+        self.btn_menu.setText("MENU")
                 
         
         self.verticalLayout_2.addWidget(self.btn_menu)
@@ -134,12 +136,7 @@ class ui_left_menu(QWidget):
             btn.setCheckable(True)        
             self.group.addButton(btn, i)
         
-        
-         
-        
-       
-
-        
+    
 
         #self.retranslateUi(left_menu)
 
