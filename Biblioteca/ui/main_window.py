@@ -40,8 +40,7 @@ class ui_MainWindow(QMainWindow):
         self.left_pages = QFrame()
         self.left_pages.setMinimumWidth(0)
         self.left_pages.setMaximumWidth(0)
-        #style(self.left_pages)
-        #self.left_pages.hide()
+        self.left_pages.setStyleSheet(("""QFrame {background-color: #23262d;}   """))
 
         #TOP BAR
         self.top_bar = QFrame()
@@ -60,8 +59,7 @@ class ui_MainWindow(QMainWindow):
         self.menu = QStackedWidget()
         self.ui_menu = ui_left_pages()
         self.ui_menu.setupUi(self.menu)
-        self.menu.setCurrentWidget(self.ui_menu.livro)
-
+        
 
         #MAIN LAYOUT
         self.main_layout.addWidget(self.left_menu)
@@ -83,7 +81,7 @@ class ui_MainWindow(QMainWindow):
         self.content_layout.addWidget(self.top_bar)
         self.content_layout.addStretch()
         self.content_layout.addWidget(self.bottom_bar)
-        self.label = QLabel("fonte")
+        #self.label = QLabel("fonte")
         
         self.menu.setCurrentWidget(self.ui_menu.usuario)
         self.left_menu.btn_usuario.clicked.connect(lambda: self.menu.setCurrentWidget(self.ui_menu.usuario))
@@ -120,20 +118,26 @@ class ui_MainWindow(QMainWindow):
         self.anim.valueChanged.connect(
             lambda value: self.left_pages.setMinimumWidth(value)
         )
-        
+        checked_button = self.left_menu.group.checkedButton()
         if end_width == 100:
            statusTela = True
+           if self.menu.currentWidget() == self.ui_menu.usuario:
+                self.left_menu.btn_usuario.setChecked(statusTela)
+           elif self.menu.currentWidget() == self.ui_menu.livro:
+                self.left_menu.btn_livros.setChecked(statusTela)
+           elif self.menu.currentWidget() == self.ui_menu.multa:
+                self.left_menu.btn_multas.setChecked(statusTela)
         else: 
             statusTela = False
             
         self.left_menu.btn_menu.blockSignals(True)
         self.left_menu.btn_menu.setChecked(statusTela)
+        
         self.left_menu.btn_menu.blockSignals(False)
         self.anim.start()
         
         if end_width == 0:
             self.left_menu.group.setExclusive(False)
-            checked_button = self.left_menu.group.checkedButton()
             if checked_button is not None:
                 checked_button.setChecked(False)
         
