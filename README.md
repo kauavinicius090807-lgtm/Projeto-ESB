@@ -126,6 +126,6 @@ Todos os artefatos desenvolvidos durante o projeto estão centralizados neste re
 
 <div align="center">
 
-### 🚧 Em Desenvolvimento (Fase de Modelagem e Escopo) 🚧
+### 🚧 Em Desenvolvimento 🚧
 
 </div>
